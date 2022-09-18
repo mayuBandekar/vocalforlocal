@@ -1,0 +1,46 @@
+.regi-body {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.exam-form {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.ms-panel {
+    background: #fff;
+    -webkit-box-shadow: 0 1px 6px 1px rgba(69, 65, 78, 0.1);
+    -moz-box-shadow: 0 1px 6px 1px rgba(69, 65, 78, 0.1);
+    box-shadow: 0 1px 6px 1px rgba(69, 65, 78, 0.1);
+    margin-bottom: 30px;
+}
+
+.ms-panel-header {
+    position: relative;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.ms-panel-header h6 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.ms-panel-body {
+    position: relative;
+    padding: 1.5rem;
+}
+
+
+.login-body {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    /* background: #D66D75; 
+     fallback for old browsers
+background: -webkit-linear-gradient(to right, #E29587, #D66D75);
+  Chrome 10-25, Safari 5.1-6
+background: linear-gradient(to right, #E29587, #D66D75); 
+W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
