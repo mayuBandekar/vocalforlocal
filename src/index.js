@@ -13,7 +13,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-axios.defaults.baseURL = "https://fast-thicket-19153.herokuapp.com";
+// axios.defaults.baseURL = "https://fast-thicket-19153.herokuapp.com";
+// axios.defaults.headers.post['Content-Type'] ='application/json';
+//   axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+axios.defaults.baseURL = "http://localhost:8000";
+
 
 root.render(
   <Provider store={store}>

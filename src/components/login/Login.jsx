@@ -6,6 +6,7 @@ import { login } from "../../redux/action/vocal";
 import { useDispatch, useSelector } from "react-redux";
 import axios from 'axios';
 import "../css/login.css";
+import Swal from 'sweetalert2';
 
 const Login = () => {
     const urlData = "/userLogin"
@@ -29,14 +30,19 @@ const Login = () => {
             const email = localStorage.getItem("email");
             const fail = localStorage.getItem("fail");
             if(email){
-                debugger
                 setMsg("Login Success");
                 navigate("/productList");
                 removeMsg();
+               
             }
             if(fail){
                 setMsg("Login Failed , Id or Password Does Not Matched");
                 removeMsg();
+                Swal.fire({
+                    icon: "error",
+                    title: "Login Failed",
+                    text: "Login Failed , Id or Password Does Not Matched",
+                  });
             }
           
         }, 3000);

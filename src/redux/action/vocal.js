@@ -10,7 +10,9 @@ export const ADJUST_QTY = "ADJUST_QTY";
 export const LOAD_CURRENT_ITEM = "LOAD_CURRENT_ITEM";
 
 
+// const APIURL = "https://fast-thicket-19153.herokuapp.com/userLogin";
 const APIURL = "http://localhost:8000/userLogin";
+
 
 
 export const login = (email, password) => {
@@ -18,12 +20,15 @@ export const login = (email, password) => {
     dispatch({
       type: LOGIN_BEGIN,
     });
-
+ 
     axios
       .post(APIURL, {
         email: email,
         password: password,
-      })
+       
+        
+      }
+      )
       .then((res) => {
         // console.log(res);
         dispatch({
@@ -40,8 +45,6 @@ export const login = (email, password) => {
           payload: err.response.data.notice
         });
         localStorage.setItem("fail", JSON.stringify(err.response.data.notice))
-
-        // localStorage.setItem("loader", JSON.stringify(email))
 
       });
 

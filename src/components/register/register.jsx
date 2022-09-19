@@ -36,16 +36,18 @@ const Registration_Form = () => {
     const register = (e) => {
         e.preventDefault();
         // console.log("hii");
-        // debugger
         let isValid = errHandel();
         if (isValid === true) {
+            let headers = { headers: { 'Accept': 'application/json' } };
+
             console.log("validate");
             const ajax = axios({
                 method: "POST",
                 url: urlData,
                 data: {
                     ...students,
-                }
+                },
+
             });
             ajax.then((response) => {
                 $(".notice").removeClass("d-none");

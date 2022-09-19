@@ -67,13 +67,14 @@ const ProductList = () => {
                                 <div className="col-md-4 my-3">
                                     <div className="bbb_deals">
                                         <div className="ribbon ribbon-top-right"><span><small className="cross">x </small>{data.cat_id}</span></div>
-                                        <Link
-                                            className="text-decoration-none"
-                                            to={`/productDetailsPage/${data.id}`}
-                                        >
+                                      
                                             <div className="bbb_deals_title">Today's Offer</div>
                                             <div className="bbb_deals_slider_container">
                                                 <div className=" bbb_deals_item hover-zoom ripple ripple-surface ripple-surface-light" data-mdb-ripple-color="light" >
+                                                <Link
+                                            className="text-decoration-none"
+                                            to={`/productDetailsPage/${data.id}`}
+                                        >
                                                     <div className="bbb_deals_image"><img src={data.pro_img} alt="" /></div>
                                                     <div className="bbb_deals_content">
                                                         <div className="bbb_deals_info_line d-flex flex-row justify-content-start">
@@ -98,12 +99,13 @@ const ProductList = () => {
                                                                     activeColor="#ffd700"
                                                                 />                                            </div>
                                                             <div className="available_bar"><span style={{ width: "17%" }}></span></div>
-                                                            <button onClick={() => handleAddToCart(data.id)} className='btn btn-primary'><strong>Add to Cart</strong></button>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
                                         </Link>
+                                                            <button onClick={() => handleAddToCart(data.id)} className='btn btn-primary'><strong>Add to Cart</strong></button>
+                                                </div>
+
+                                            </div>
                                     </div>
                                 </div>
 
